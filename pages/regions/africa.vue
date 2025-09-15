@@ -18,6 +18,22 @@
 </template>
 
 <script setup>
+useHead({
+  title: 'Africa',
+  meta: [
+    { name: 'description', content: 'Countries in Africa with flags, population and more.', key: 'description' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://mynuxtproject.netlify.app/regions/africa' }
+  ]
+})
+
+useSeoMeta({
+  ogTitle: 'Africa · My Project',
+  ogDescription: 'Countries in Africa with flags, population and more.',
+  ogUrl: 'https://mynuxtproject.netlify.app/regions/africa'
+})
+
 import axios from 'axios'
 import CountryCard from '@/components/CountryCard.vue'
 

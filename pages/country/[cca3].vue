@@ -16,6 +16,23 @@
 <script setup>
 import axios from 'axios'
 const route = useRoute()
+const code = computed(() => String(route.params.cca3).toUpperCase())
+
+useHead({
+  title: () => `${code.value} · Country Details`,
+  meta: [
+    { name: 'description', content: `Details for ${code.value} including region, subregion, population.`, key: 'description' }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://mynuxtproject.netlify.app/country/${code.value}` }
+  ]
+})
+
+useSeoMeta({
+  ogTitle: () => `${code.value} · Country Details`,
+  ogDescription: () => `Details for ${code.value} including region, subregion, population.`,
+  ogUrl: () => `https://mynuxtproject.netlify.app/country/${code.value}`
+})
 
 const { data } = await useAsyncData(
   () => `country-${route.params.cca3}`,

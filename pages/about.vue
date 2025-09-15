@@ -1,12 +1,17 @@
-<template>
-  <section class="page">
-    <h1>About</h1>
-    <p>Built with Nuxt 4, Axios, and the REST Countries API.</p>
-  </section>
-</template>
+<script setup>
+useHead({
+  title: 'About',
+  meta: [
+    { name: 'description', content: 'About page with details about the site.', key: 'description' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://mynuxtproject.netlify.app/about' }
+  ]
+})
 
-<script setup></script>
-
-<style lang="scss" scoped>
-.page { padding: 1rem; }
-</style>
+useSeoMeta({
+  ogTitle: 'About · My Project',
+  ogDescription: 'About page with details about the site.',
+  ogUrl: 'https://mynuxtproject.netlify.app/about'
+})
+</script>
