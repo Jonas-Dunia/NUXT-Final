@@ -1,7 +1,7 @@
 <template>
-  <section class="page">
-    <h1>Welcome</h1>
-    <p>This site demonstrates Nuxt routing and API data.</p>
+  <section style="padding:1rem">
+    <h1>It works 🎉</h1>
+    <p>If you can see this, your layout + routing are wired correctly.</p>
   </section>
 </template>
 
