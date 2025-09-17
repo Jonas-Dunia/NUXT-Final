@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   ssr: true,
+  routeRules: { '/**': { prerender: true } },
+  nitro: { prerender: { crawlLinks: true } },
+  // ssr: false, // optional if you truly want SPA; prerender works with SSR on too
   app: {
     head: {
       titleTemplate: '%s · My Project',
