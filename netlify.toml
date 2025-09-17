@@ -1,3 +1,6 @@
 [build]
   command = "npm run generate"
   publish = ".output/public"
+
+[Build.environment]
+  Mode.Version ="20"
